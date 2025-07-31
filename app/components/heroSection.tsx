@@ -33,7 +33,7 @@ export default function HeroSection() {
           <p className="text-md text-secondary mb-6">
             Our landing page template works on all devices , so you have only to set it up once, and it will look great on every device.
           </p>
-          <div className="mt-6 w-3/4 flex flex-col md:flex-row gap-4">
+          <div className="mt-6 w-3/4 flex md:flex-row gap-4">
             <button className="text-white text-sm bg-blue-600 transition-transform duration-200 hover:scale-110 hover:cursor-pointer active:bg-blue-300 rounded-xs py-2 w-1/2 flex justify-center items-center"> Request Demo <ArrowRight size={16} /> </button>
             <button className="text-white text-sm bg-secondary transiton-transform duration-200 hover:scale-110 hover:cursor-pointer active:bg-gray-50 rounded-xs py-2 w-1/2 flex justify-center items-center"> Explore Product <ArrowRight size={16} /> </button>
           </div>
