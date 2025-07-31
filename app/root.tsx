@@ -1,6 +1,7 @@
 import "./app.css";
 
 import {
+  Link,
   Links,
   Meta,
   Outlet,
@@ -71,7 +72,7 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
   }
 
   return (
-    <main className="pt-16 p-4 container mx-auto">
+    <main className="pt-16 p-4 container mx-auto text-white">
       <h1>{message}</h1>
       <p>{details}</p>
       {stack && (
@@ -79,6 +80,9 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
           <code>{stack}</code>
         </pre>
       )}
+      <Link to="/">
+        <button className="w-fit text-white text-sm bg-blue-600 transition-transform duration-200 hover:scale-110 hover:cursor-pointer active:bg-blue-300 rounded-xs mt-4 p-2 flex justify-center items-center"> Homepage </button>
+      </Link>
     </main>
   );
 }
