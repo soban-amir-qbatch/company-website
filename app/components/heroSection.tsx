@@ -3,7 +3,7 @@ import React, { useRef, useState } from 'react'
 
 export default function HeroSection() {
 
-  const videoRef = useRef(null)
+  const videoRef = useRef<HTMLVideoElement>(null)
   const [isPlaying, setIsPlaying] = useState(false)
 
   const handlePlay = () => {
