@@ -130,7 +130,7 @@ export default function SignUpModal() {
       <button 
         type="submit" 
         disabled={isSubmitting} 
-        className={`w-1/3 p-3 bg-blue-600 text-white rounded-md transition-colors duration-200 ${isSubmitting ? 'opacity-50 cursor-not-allowed' : 'hover:bg-blue-700 hover:cursor-pointer'}`}
+        className={`w-4/6 md:w-1/2 p-3 bg-blue-600 text-white rounded-md transition-colors duration-200 ${isSubmitting ? 'opacity-50 cursor-not-allowed' : 'hover:bg-blue-700 hover:cursor-pointer'}`}
       >
         {isSubmitting ? 'Signing up...' : 'Sign Up'}
       </button>
