@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap');
 @import "tailwindcss";
 
 body {
@@ -7,4 +8,7 @@ body {
 @theme {
   --color-primary: #101E2E;
   --color-secondary: #8F9CB2;
+  --color-gray-shade: #F2F6FB;
+
+  --font-grace: 'Covered By Your Grace', cursive;
 }
