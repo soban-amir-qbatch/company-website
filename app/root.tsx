@@ -10,6 +10,7 @@ import {
 } from "react-router";
 
 import Navbar from "./components/navbar";
+import Footer from "./components/footer";
 import type { Route } from "./+types/root";
 
 export const links: Route.LinksFunction = () => [
@@ -48,6 +49,7 @@ export default function App() {
     <>
       <Navbar />
       <Outlet />
+      <Footer />
     </>
   )
 }
