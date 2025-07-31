@@ -13,7 +13,7 @@ export default function SignUp() {
               {/* Content */}
       
               <div className="relative z-10 px-6 py-15 max-w-4xl mx-auto flex flex-col items-center text-center">
-                <span className="text-white text-4xl font-serif w-2/3 text-center mb-20">Sign Up</span>
+                <span className="text-white text-4xl font-serif w-2/3 text-center mb-10">Sign Up</span>
 
                 <SignUpModal />
                 

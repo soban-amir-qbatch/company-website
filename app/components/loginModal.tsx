@@ -3,6 +3,7 @@ import type { TLoginSchema } from '~/lib/types';
 import { loginSchema } from '~/lib/types';
 import {useForm} from 'react-hook-form';
 import {zodResolver} from '@hookform/resolvers/zod';
+import { Link } from 'react-router';
 
 export default function LoginModal() {
   const { 
@@ -25,7 +26,7 @@ export default function LoginModal() {
     <div className='bg-white p-6 rounded-lg shadow-lg w-5/6 md:w-1/2  mx-auto'>
 
       <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col items-start gap-y-1' >
-        
+
         <label htmlFor="email" className="block text-sm font-medium text-gray-700 ml-2">
           Email
         </label>
@@ -51,10 +52,14 @@ export default function LoginModal() {
       <button 
         type="submit" 
         disabled={isSubmitting} 
-        className={`w-full p-3 bg-blue-600 text-white rounded-md transition-colors duration-200 ${isSubmitting ? 'opacity-50 cursor-not-allowed' : 'hover:bg-blue-700'}`}
+        className={`w-full p-3 bg-blue-600 text-white rounded-md transition-colors duration-200 ${isSubmitting ? 'opacity-50 cursor-not-allowed' : 'hover:bg-blue-700 hover:cursor-pointer'}`}
       >
         {isSubmitting ? 'Logging in...' : 'Login'}
       </button>
+
+      <Link to="/sign-up" className="text-sm text-blue-600 hover:underline hover:cursor-pointer mt-4">
+        Don't have an account? Sign Up
+      </Link>
       
       </form>
  

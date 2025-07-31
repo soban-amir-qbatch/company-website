@@ -3,6 +3,7 @@ import type { TSignUpSchema } from '~/lib/types';
 import { signUpSchema } from '~/lib/types';
 import {useForm} from 'react-hook-form';
 import {zodResolver} from '@hookform/resolvers/zod';
+import { Link, redirect } from 'react-router';
 
 export default function SignUpModal() {
   const { 
@@ -19,6 +20,8 @@ export default function SignUpModal() {
     
     await new Promise(resolve => setTimeout(resolve, 2000));
     reset();
+
+    redirect('/login'); // Redirect to login after successful sign up
   };
 
   return (
@@ -26,7 +29,7 @@ export default function SignUpModal() {
 
       <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col items-center gap-y-1 w-full' >
         
-        <div className='flex justify-center items-center w-full gap-2'>
+        <div className='flex flex-col md:flex-row justify-center items-center w-full md:gap-2'>
           <div className='flex flex-col items-start gap-y-1 w-full'>
             
             <label htmlFor="name" className="block text-sm font-medium text-gray-700 ml-2">
@@ -127,10 +130,14 @@ export default function SignUpModal() {
       <button 
         type="submit" 
         disabled={isSubmitting} 
-        className={`w-1/3 p-3 bg-blue-600 text-white rounded-md transition-colors duration-200 ${isSubmitting ? 'opacity-50 cursor-not-allowed' : 'hover:bg-blue-700'}`}
+        className={`w-1/3 p-3 bg-blue-600 text-white rounded-md transition-colors duration-200 ${isSubmitting ? 'opacity-50 cursor-not-allowed' : 'hover:bg-blue-700 hover:cursor-pointer'}`}
       >
         {isSubmitting ? 'Signing up...' : 'Sign Up'}
       </button>
+
+      <Link to="/login" className="self-start text-sm text-blue-600 hover:underline hover:cursor-pointer mt-4">
+        Already have an account? Login
+      </Link>
       
       </form>
  
